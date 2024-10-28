@@ -1,5 +1,5 @@
-
-import React, { useState, useEffect } from 'react';
+// src/components/Lottery.js
+import React, { useState } from 'react';
 import NumberSelection from './NumberSelection';
 import Results from './Results';
 import { Button, Container, Typography, Box } from '@mui/material';
@@ -23,7 +23,6 @@ const Lottery = () => {
         setIsDrawn(true);
     };
 
-    
     const resetGame = () => {
         setSelectedNumbers([]);
         setWinningNumbers([]);
@@ -40,7 +39,12 @@ const Lottery = () => {
                     color="primary"
                     onClick={drawWinningNumbers}
                     disabled={selectedNumbers.length < 5}
-                    style={{ marginRight: '10px' }}
+                    style={{
+                        marginRight: '10px',
+                        padding: '10px 20px',
+                        fontSize: '16px',
+                        fontWeight: 'bold',
+                    }}
                 >
                     Sortear
                 </Button>
@@ -48,6 +52,11 @@ const Lottery = () => {
                     variant="outlined"
                     color="secondary"
                     onClick={resetGame}
+                    style={{
+                        padding: '10px 20px',
+                        fontSize: '16px',
+                        fontWeight: 'bold',
+                    }}
                 >
                     Reiniciar
                 </Button>
@@ -58,3 +67,6 @@ const Lottery = () => {
 };
 
 export default Lottery;
+
+
+
