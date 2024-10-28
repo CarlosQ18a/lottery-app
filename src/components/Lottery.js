@@ -6,7 +6,7 @@ const Lottery = () => {
     const [winningNumbers, setWinningNumbers] = useState([]);
     const [isDrawn, setIsDrawn] = useState(false);
 
-    const drawWinningNumbers = () => {
+    const generateWinningNumbers = () => {
         const drawnNumbers = [];
         while (drawnNumbers.length < 5) {
             const randomNum = Math.floor(Math.random() * 50) + 1;
@@ -26,8 +26,8 @@ const Lottery = () => {
     return (
         <Container>
             <Box my={4}>
-                <Typography variant="h4" gutterBottom>Lottery Draw</Typography>
-                <Button variant="contained" color="primary" onClick={drawWinningNumbers}>Draw Numbers</Button>
+                <Typography variant="h4" gutterBottom>Lottery</Typography>
+                <Button variant="contained" color="primary" onClick={generateWinningNumbers}>Generate Winning Numbers</Button>
                 <Button variant="contained" color="secondary" onClick={resetGame} style={{ marginLeft: 8 }}>Reset</Button>
                 {isDrawn && <WinningNumbers numbers={winningNumbers} />}
             </Box>
@@ -36,6 +36,7 @@ const Lottery = () => {
 };
 
 export default Lottery;
+
 
 
 

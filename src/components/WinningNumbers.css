@@ -1,0 +1,12 @@
+.winning-numbers-title {
+    color: blue;
+}
+
+.winning-number {
+    color: black;
+    margin-right: 5px;
+}
+
+.no-numbers-message {
+    color: blue;
+}
